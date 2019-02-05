@@ -221,7 +221,7 @@ cd ../../..
 We can create folders and files. Let's setup the directory structure that we will use for the rest of the workshop. It is going to look like this:
 
 ```
-SDC_10-27-2018
+SDC_02-23-2019
     |
     repository
         |
@@ -236,21 +236,21 @@ SDC_10-27-2018
 Let's create the `SDC` folder withe `make directory` command.
 
 ```
-mkdir SDC_10-27-2018
+mkdir SDC_02-23-2019
 ```
 
 Now we can use `tab complete` to create the rest of the directories.
 
 ```
-mkdir SDC_10-27-2018/repository
-mkdir SDC_10-27-2018/repository/thesis
-mkdir SDC_10-27-2018/repository/analyses
-mkdir SDC_10-27-2018/repository/data
+mkdir SDC_02-23-2019/repository
+mkdir SDC_02-23-2019/repository/thesis
+mkdir SDC_02-23-2019/repository/analyses
+mkdir SDC_02-23-2019/repository/data
 ```
 
 ```
-mkdir SDC_10-27-2018/repository/data/original_data
-mkdir SDC_10-27-2018/repository/data/processed_data
+mkdir SDC_02-23-2019/repository/data/original_data
+mkdir SDC_02-23-2019/repository/data/processed_data
 ```
 
 Let's go into the `SDC` directory. We will spend the rest of the workshop here.
@@ -258,7 +258,7 @@ Let's go into the `SDC` directory. We will spend the rest of the workshop here.
 How do we get there?
 
 ```
-cd SDC_10-27-2018
+cd SDC_02-23-2019
 ```
 
 Also use File Explorer to drill into this folder. Do you see the sub-folders?
@@ -282,7 +282,7 @@ ls -la repository/data
 > use the absolute path and the shortcut to home
 
 ```
-ls -la ~/SDC_10-27-2018/repository/data
+ls -la ~/SDC_02-23-2019/repository/data
 ```
 
 Do you see the directories? Were they the same for each path you used?
@@ -296,7 +296,7 @@ When you are done playing around, make sure you are in the SDC repository folder
 How do you do that?
 
 ```
-cd ~/SDC_10-27-2018/repository
+cd ~/SDC_02-23-2019/repository
 ```
 
 ## ASSESSMENT
@@ -466,7 +466,7 @@ We are going to be working with a number of data files for the rest of the works
 
 Go to this link (it is in the Etherpad)
 
-> https://github.com/UA-Carpentries-Workshops/2018-10-27-Tucson-Resources
+> https://github.com/UA-Carpentries-Workshops/2019-02-23-WorkshopResources
 
 Go to the top right corner of the page where it says `Fork`
 
@@ -479,7 +479,7 @@ We will download a copy of the repository using `git clone`.
 > Make sure you are in the SDC directory, up one level from repository
 
 ```
-cd ~/SDC_10-27-2018
+cd ~/SDC_02-23-2019
 ```
 
 or go up one level
@@ -496,7 +496,7 @@ pwd
 
 Are you here?
 
-`SDC_10-27-2018`
+`SDC_02-23-2019`
 
 ## git clone
 
@@ -511,7 +511,7 @@ git clone
 and then paste the URL so that it looks like this
 
 ```
-git clone https://github.com/UA-Carpentries-Workshops/2018-10-27-Tucson-Resources
+git clone https://github.com/UA-Carpentries-Workshops/2019-02-23-WorkshopResources
 ```
 
 Hit enter.
@@ -539,7 +539,7 @@ cp -r
 We also need to tell the copy command what files to copy. To copy the contents of a directory we put in the path to the directory and add a *. This is the syntax that tells the cp command to get the contents but not the directory.
 
 ```
-cp -r 2018-10-27-Tucson-Resources/data/* repository/data/original_data/
+cp -r 2019-02-23-WorkshopResources/data/* repository/data/original_data/
 ```
 
 What was copied? List the contents of the original_data directory.
