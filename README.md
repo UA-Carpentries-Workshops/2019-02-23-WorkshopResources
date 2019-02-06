@@ -10,6 +10,11 @@ NOTE to contributors. These are the lessons and content from previous workshops.
 
 * PRUNE heavily
 * ADD your own flare
+* Improve by providing better analogies
+* Improve by adding more formative assessments
+* Improve the rhythm and flow by adding more breaks
+
+Do not deviate from the Software Carpentry pedagogy. Work closely with your workshop mentors.
 
 ## Shell lessons
 
