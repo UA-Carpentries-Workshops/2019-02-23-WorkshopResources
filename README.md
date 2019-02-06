@@ -12,6 +12,8 @@ NOTE to contributors. These are the lessons and content from previous workshops.
 * ADD your own flare
 * Improve by providing better analogies
 * Improve by adding more formative assessments
+* Improve by giving them more practice exercises
+* Improve by shortening lessons and sticking to the basics to keep with the time constraints
 * Improve the rhythm and flow by adding more breaks
 
 Do not deviate from the Software Carpentry pedagogy. Work closely with your workshop mentors.
