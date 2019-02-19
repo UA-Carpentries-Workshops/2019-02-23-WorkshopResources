@@ -11,7 +11,7 @@ mkdir scripts
 
 Now let's copy the scripts from the git repo(sitory) we cloned earlier and put the copies into the new directory:
 ```bash
-cp -R ~/SDC_02-23-2019/2019-02-23-WorkshopResources/shell-lessons/scripts/ scripts/
+cp -R ~/SDC_02-23-2019/2019-02-23-WorkshopResources/shell-lessons/
 ```
 
 We'll be working more with the gapminder data in this session. We will first review some commands, then practice chaining commands together using what are called *pipes*. Then we'll explore writing scripts that contain loops to repeat sets of commands and pipes.
@@ -19,7 +19,7 @@ We'll be working more with the gapminder data in this session. We will first rev
 Move into the directory that contains the gapminder_by_country data:
 
 ```bash
-cd data/gapminder_data/gapminder_by_country
+cd data/original_data/gapminder_data/gapminder_by_country
 ```
 
 Run the command to list the files:
@@ -147,7 +147,7 @@ Explain why the numbers are not the same.
 ### Writing loops to iterate over a set of files
 
 Another way to work with a collection of files is to write a `for loop`. Inside the loop you can list a number of commands, but you'll need to give keywords `do` and `done` to demarcate the start and end of the loop. We'll write our first loop by typing lines in the terminal.
-NOTE: You'll type the lines one by one, and after you type the first line, the shell will display the prompt symbol '>' for each subsequent line you type until it sees the 'done' line. Type these lines in your terminal (pay close attention to the symbols used):
+*NOTE: You'll type the lines one by one, and after you type the first line, the shell will display the prompt symbol '>' for each subsequent line you type until it sees the 'done' line.* Type these lines in your terminal (pay close attention to the symbols used):
 
 ```bash
 for gapminderfile in [W-Z]*.txt
@@ -164,18 +164,18 @@ So far we've used just a few files to practice our loop, but you can see that lo
 
 ## Storing a loop in a file
 
-While we can type and execute a loop using the command line, it is more effective (and visually pleasing) to use a text editor to create a file, called a 'script'. Let's start with the simple loop we've already looked at. You'll find it stored in the file `~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository/scripts/loop_files.sh`.
+While we can type and execute a loop using the command line, it is more effective (and visually pleasing) to use a text editor to create a file, called a 'script'. Let's start with the simple loop we've already looked at. You'll find it stored in the file `~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository/loop_files.sh`.
 
 ***Activity***<br>
 IMPORTANT: The loop_files.sh script will only run properly if it's executed in the directory containing the data files. Check your present working directory, and if you need to, use the cd command to go to the gapminder_by_country directory, then run loop_files.sh using:
 
 ```bash
-bash ../../../scripts/loop_files.sh
+bash ../../../../loop_files.sh
 ```
 Or by using:
 
 ```bash
-sh ../../../scripts/loop_files.sh
+sh ../../../../loop_files.sh
 ```
 ***Etherpad questions***<br>
 a. What happened when you ran the script?<br>
@@ -183,7 +183,7 @@ b. Mention two things that you notice about the code in the script.<br>
 
 Let's break down what is happening.
 
-1. In this case, the code inside the *for loop* will run once for each filename that matches `[U-Z]*.txt`. For loops can also be given a numeric range to iterate over. (For example, `cat ../../../scripts/loop_intro.sh`. There are other types of loops that run until a certain condition is met. You'll find information on those at the end of this lesson, and we'll cover them if time permits. <br>
+1. In this case, the code inside the *for loop* will run once for each filename that matches `[U-Z]*.txt`. For loops can also be given a numeric range to iterate over. (For example, `cat ../../../../loop_intro.sh`. There are other types of loops that run until a certain condition is met. You'll find information on those at the end of this lesson, and we'll cover them if time permits. <br>
 2. *gapminderfile* is the main variable in our loop. Each time the loop runs (called an iteration) the *gapminderfile* variable is reassigned to a new filename. <br>
 3. During each iteration, we reassign the variable and perform a task/command inside the loop in association with this variable. The *beginning of the loop* is signaled by the command `do`.<br>
 4. The *$* symbol indicates the name of the variable inside the loop. It should be the same name as the one used in the `for` line at the top of the loop. In other words, we call for the variable’s value by putting *$* in front of it. <br>
@@ -195,7 +195,7 @@ For our first script, all we did is echo each filename. This is often a good fir
 Find the `loop_cut.sh` file, use cat to examine it, and then execute it by running:<br>
 
 ```bash
-bash ../../../scripts/loop_cut.sh
+bash ../../../../loop_cut.sh
 ```
 
 a. What does this loop do?<br>
@@ -208,7 +208,7 @@ Tell how you would modify loop_cut.sh so that we will see the lowest life expect
 Edit a copy of the script and make the change:
 
 ```bash
-nano ../../../scripts/loop_cut_low.sh
+nano ../../../../loop_cut_low.sh
 ```
 
 Run the edited script and put up a sticky to indicate whether you got this to work or you need help.
@@ -218,10 +218,10 @@ Run the edited script and put up a sticky to indicate whether you got this to wo
 The `loop_cut.sh` script passes the option '-f 5' to the cut command, so we will always see output from the 5th field of the gapminder_by_country files. We will now see how to make the script more flexible, so that we can specify the number for the field of interest when we run the script. If you've ever heard to anyone refer to the practice of 'hard-coding', fixing '-f 5' in loop_cut.sh is an example of this, and it's not considered to be a good practice.
 
 ***Activity***<br>
-Use the cat command to show the contents of the ../../../scripts/loop_cut_arg.sh script. The special variable "$1" refers to the first command line argument. To run the script, enter:
+Use the cat command to show the contents of the ../../../../loop_cut_arg.sh script. The special variable "$1" refers to the first command line argument. To run the script, enter:
 
 ```bash
-bash ../../../scripts/loop_cut_arg.sh 6
+bash ../../../../loop_cut_arg.sh 6
 ```
 
 We just saw that in a shell script "$1" refers to the first script argument (in this case the number of the field to cut.)
@@ -252,7 +252,7 @@ Let's run a script that expects a 2nd argument telling whether to display high o
 Use `cat` to show the code in the `loop_conditional1.sh` script:
 
 ```bash
-cat ../../../scripts/loop_conditional1.sh
+cat ../../../../loop_conditional1.sh
 ```
 ***Etherpad question***<br>
 List what you see that refers to the 2nd argument.
@@ -260,10 +260,10 @@ List what you see that refers to the 2nd argument.
 Remember that the first argument tells which field of data to cut, so examples of using the `loop_conditional1.sh` script are:
 
 ```bash
-bash ../../../scripts/loop_conditional1.sh 5 high
-bash ../../../scripts/loop_conditional1.sh 5 low
-bash ../../../scripts/loop_conditional1.sh 6 high
-bash ../../../scripts/loop_conditional1.sh 6 low
+bash ../../../../loop_conditional1.sh 5 high
+bash ../../../../loop_conditional1.sh 5 low
+bash ../../../../loop_conditional1.sh 6 high
+bash ../../../../loop_conditional1.sh 6 low
 ```
 
 ***Activity***<br>
@@ -307,7 +307,7 @@ So far our scripts that work on gapminder data files have only looked at files w
 We've seen the "$1", "$2", etc. references to script arguments. Now we'll use "$@" to refer to the entire collection of arguments. Look at the `loop_files_args.sh` file:
 
 ```bash
-cat ../../../scripts/loop_files_args/sh
+cat ../../../../loop_files_args/sh
 ```
 
 The code is:
@@ -323,9 +323,9 @@ done
 ***Activity***<br>
 Run this script as follows:
 ```bash
-bash ../../../scripts/loop_files_args.sh A*.txt
-bash ../../../scripts/loop_files_args.sh [I-K]*.txt
-bash ../../../scripts/loop_files_args.sh [I-K,U]*.txt
+bash ../../../../loop_files_args.sh A*.txt
+bash ../../../../loop_files_args.sh [I-K]*.txt
+bash ../../../../loop_files_args.sh [I-K,U]*.txt
 ```
 
 ***Etherpad question***<br>
@@ -340,7 +340,7 @@ You may have noticed that when using "$@", we did not use the positional argumen
 Even if we are careful, it is possible to make mistakes while writing scripts. Running a script that contains an error (or bug) could result in an empty output or even worse, an incorrect result. In order to help find bugs in our script we can use the -x flag to run bash in debug mode. Running a script in debug mode prints out each command as it is run, which will help to locate errors. Try this:
 
  ```bash
-bash -x ../../../scripts/loop_conditional1.sh 5 average
+bash -x ../../../../loop_conditional1.sh 5 average
 ```
 
 ## Shell exercise
@@ -368,14 +368,14 @@ do
     echo $gapminderfile  # print the filename on the screen
     if [ "$2" = "high" ]  
     then  # if "high" then show highest value (tail)
-            cut -f "$1" $gapminderfile | sort -n | tail -1 >> gm_field"$1"_"$2".out
+            cut -f "$1" $gapminderfile | sort -n | tail -1 >> ../../processed_files/gm_field"$1"_"$2".out
     else  # otherwise show lowest value (head)
-            cut -f "$1" $gapminderfile | sort -n | head -1 >> gm_field"$1"_"$2".out
+            cut -f "$1" $gapminderfile | sort -n | head -1 >> ../../processed_files/gm_field"$1"_"$2".out
     fi
 done
 
 # Move the output file to the home directory
-mv gm_field"$1"_"$2".out ~
+mv ../../processed_files/gm_field"$1"_"$2".out ~
 ```
 
 ### Optional more Advanced Material
@@ -385,15 +385,15 @@ mv gm_field"$1"_"$2".out ~
 Think back to our earlier example of running `grep` to find all lines in gapminder data files containing 2007, and the issue we uncovered if our pattern did not pad the "2007" string with white space. How could we dignose what's going on? Remember that we can use '>' to send the output of a command to a file. Run the following two commands:
 ```bash
 cd ~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository/data/gapminder_data/gapminder_by_country
-grep "2007" *.txt > Found2007
-grep "\b2007\b" *.txt >Found2007b
+grep "2007" *.txt > ../../processed_files/Found2007
+grep "\b2007\b" *.txt > ../../processed_files/Found2007b
 ```
 
 ***Etherpad question***<br>
 Write a command that would show the sizes of both of the new files. The `diff` command will show us the differences between 2 files:
 
 ```bash
-diff Found2007 Found2007b
+diff ../../processed_files/Found2007 ../../processed_files/Found2007b
 ```
 
 ## An Introduction to File permissions
