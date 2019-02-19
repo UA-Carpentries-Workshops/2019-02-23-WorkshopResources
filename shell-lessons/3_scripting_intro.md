@@ -60,7 +60,7 @@ cat [W-Z]*.txt
 
 We're starting to see a powerful feature of the shell, which is called a '*character class*'. There are many more ways to do pattern matching with the shell, but they are beyond the scope of this class. Feel free to explore these on your own! One useful source is: https://wiki.bash-hackers.org/syntax/pattern
 
-### Using pipes to work with data
+## Using pipes to work with data
 
 Use the Up-arrow key to scroll back through your command history to find the command that showed the contents of the country.cc.txt file. Press the Enter/Return key to execute the command again.
 
@@ -100,7 +100,7 @@ ls *.txt | wc
 ***Etherpad question***<br>
 Show how you could modify one part of the pipeline above to show only the number of files in the current directory. Is it the `ls` portion or the `wc` portion of the pipe that needs to be changed?
 
-# Revisiting grep
+## Revisiting grep
 
 The `grep` command has an odd name. It's a shortcut for 'get regular expression and print'. (You don't need to remember that though.) The important thing to remember about grep is that it will search for strings or words in files, and show you which lines contain those strings or words. Let's try a couple of examples:
 
@@ -144,7 +144,7 @@ Explain why the numbers are not the same.
 
 ***FIVE MINUTES BREAK***
 
-### Writing loops to iterate over a set of files
+## Writing loops to iterate over a set of files
 
 Another way to work with a collection of files is to write a `for loop`. Inside the loop you can list a number of commands, but you'll need to give keywords `do` and `done` to demarcate the start and end of the loop. We'll write our first loop by typing lines in the terminal.
 *NOTE: You'll type the lines one by one, and after you type the first line, the shell will display the prompt symbol '>' for each subsequent line you type until it sees the 'done' line.* Type these lines in your terminal (pay close attention to the symbols used):
@@ -254,6 +254,7 @@ Use `cat` to show the code in the `loop_conditional1.sh` script:
 ```bash
 cat ../../../../loop_conditional1.sh
 ```
+
 ***Etherpad question***<br>
 List what you see that refers to the 2nd argument.
 
@@ -331,7 +332,7 @@ bash ../../../../loop_files_args.sh [I-K,U]*.txt
 ***Etherpad question***<br>
 Type the number of lines of output each run produced. Use your stickies to indicate whether you need help.
 
-# More about shell arguments
+## More about shell arguments
 
 You may have noticed that when using "$@", we did not use the positional arguments "$1", "$2", etc. Later on in this lesson we'll see a way to do that, if time permits (and if not, the notes are there for your future reference).
 
@@ -378,7 +379,7 @@ done
 mv ../../processed_files/gm_field"$1"_"$2".out ~
 ```
 
-### Optional more Advanced Material
+# Optional more Advanced Material
 
 ## Exploring differences between files
 
@@ -530,6 +531,6 @@ done
 mv gm_field"$field"_"$order".out ~
 ```
 
-### Wrap up
+# Wrap up
 
 Hopefully you've learned a lot of useful tools today. As you keep practicing and developing your skills, it will get easier and you'll find many, many more commands and techniques that will make you a more efficient scientist!
