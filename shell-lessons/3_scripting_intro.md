@@ -144,6 +144,22 @@ Explain why the numbers are not the same.
 
 ***FIVE MINUTES BREAK***
 
+## Review of navigating directories
+
+Recall that the gapminder data is in:
+`~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository/data/original_data/gapminder/gapminder_by_country/`
+and that we copied some scripts into:
+`~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository/scripts`
+
+***Etherpad question***<br>
+If we start out in the gapminder_by_country directory shown above, what would be the command for moving to the scripts directory? Type your answer in the Etherpad:
+
+a. cd ~/scripts
+b. cd ../scripts
+c. cd ../../../../scripts
+d. cd scripts
+e. none of the above
+
 ## Writing loops to iterate over a set of files
 
 Another way to work with a collection of files is to write a `for loop`. Inside the loop you can list a number of commands, but you'll need to give keywords `do` and `done` to demarcate the start and end of the loop. We'll write our first loop by typing lines in the terminal.
