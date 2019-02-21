@@ -162,7 +162,7 @@ e. none of the above
 
 ## Writing loops to iterate over a set of files
 
-Another way to work with a collection of files is to write a `for loop`. Inside the loop you can list a number of commands, but you'll need to give keywords `do` and `done` to demarcate the start and end of the loop. We'll write our first loop by typing lines in the terminal.
+We've done some work on the command line using a set of the gapminder files. Another way to work with a collection of files is to write a `for loop`. Inside the loop you can list a number of commands, but you'll need to give keywords `do` and `done` to demarcate the start and end of the loop. We'll write our first loop by typing lines in the terminal.
 *NOTE: You'll type the lines one by one, and after you type the first line, the shell will display the prompt symbol '>' for each subsequent line you type until it sees the 'done' line.* Type these lines in your terminal (pay close attention to the symbols used):
 
 ```bash
@@ -397,9 +397,13 @@ mv ../../processed_files/gm_field"$1"_"$2".out ~
 
 # Optional more Advanced Material
 
+## Types of files
+
+The gapminder data files we've explored were named `*.cc.txt` where the .txt suffix indicates that the files are "plain text" files. The fields in these files are delimited with Tabs, so another good way of naming them is to use `*.tsv` (tab separated values.) You may also be familiar with `.csv` files. In the Etherpad, type the meaning of 'csv.' All of the aforementioned files (.txt, .tsv, .csv) are examples of "plain text" files and you can easily work with them on the command line. If you have '.xlsx' files, these include special formatting information that is not plain text, so you will need to export these as comma- or tab-separated files if you want to work with them on the command line.
+
 ## Exploring differences between files
 
-Think back to our earlier example of running `grep` to find all lines in gapminder data files containing 2007, and the issue we uncovered if our pattern did not pad the "2007" string with white space. How could we dignose what's going on? Remember that we can use '>' to send the output of a command to a file. Run the following two commands:
+Think back to our earlier example of running `grep` to find all lines in gapminder data files containing 2007, and the issue we uncovered if our pattern did not pad the "2007" string with white space. How could we diagnose what's going on? Remember that we can use '>' to send the output of a command to a file. Run the following commands:
 ```bash
 cd ~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository/data/gapminder_data/gapminder_by_country
 grep "2007" *.txt > ../../processed_files/Found2007
