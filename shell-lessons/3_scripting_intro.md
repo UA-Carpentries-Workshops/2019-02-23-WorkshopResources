@@ -34,7 +34,7 @@ What do you notice about the similarities and differences of the filenames? We'l
 What do you see that's interesting? What command can we use to look at the contents of the file with the fewest number of lines?
 
 ```bash
-cat country.cc.txt
+cat header.txt
 ```
 
 Now we have an idea of what data these files contain. Let's look at a few examples.
@@ -62,7 +62,7 @@ We're starting to see a powerful feature of the shell, which is called a '*chara
 
 ## Using pipes to work with data
 
-Use the Up-arrow key to scroll back through your command history to find the command that showed the contents of the country.cc.txt file. Press the Enter/Return key to execute the command again.
+Use the Up-arrow key to scroll back through your command history to find the command that showed the contents of the header.txt file. Press the Enter/Return key to execute the command again.
 
 If we want to examine life expectancies for different countries, which column of data (i.e. column number) would we be interested in?
 
