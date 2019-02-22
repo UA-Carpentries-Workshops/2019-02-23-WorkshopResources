@@ -539,7 +539,7 @@ cp -r
 We also need to tell the copy command what files to copy. To copy the contents of a directory we put in the path to the directory and add a *. This is the syntax that tells the cp command to get the contents but not the directory.
 
 ```
-cp -r 2019-02-23-WorkshopResources/data/* repository/data/original_data/
+cp -r 2019-02-23-WorkshopResources/shell-lessons/data/* repository/data/original_data/
 ```
 
 What was copied? List the contents of the original_data directory.
