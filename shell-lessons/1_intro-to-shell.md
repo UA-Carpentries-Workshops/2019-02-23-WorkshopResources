@@ -6,7 +6,7 @@ In your browser
 
 * Open a tab and go to the Etherpad
 * Open a tab and go to Github and login with your account
-* Open a tab and go to the website and make sure you have installed the required software for your system. `Red sticky` if you need help. 
+* Open a tab and go to the Workshop website and make sure you have installed the required software for your system. `Red sticky` if you need help. 
 * Open a tab and go to [Explain Shell](http://explainshell.com/)
 * Open a tab and go to the Shell Share in the link in the Etherpad
 * Open `Terminal` or `git bash` and enter `nano` to make sure you have `nano` installed.
@@ -88,10 +88,16 @@ Let's get back to `ls`.
 
 `ls` has lots of options that you can use to sort and format the listing, just like you can do in File Explorer.
 
-Let's see what they are.
+Let's see what they are. On Windows you can run the command:
 
 ```
 ls --help
+```
+
+and on Mac you can use:
+
+```
+man ls
 ```
 
 What did you see? A description and lots of options? Great.
@@ -118,7 +124,7 @@ Try them both. See the difference?
 
 This is called the `long` format, hence `-l`.
 
-Sometimes there are hidden files and folders. These start with a `.`. `ls` won't show hidden things unless you give it that option.
+Sometimes there are hidden files and folders. These start with a `.`. `ls` won't show hidden things unless you give it the -a option.
 
 ```
 ls -a
@@ -482,7 +488,7 @@ We will download a copy of the repository using `git clone`.
 cd ~/SDC_02-23-2019
 ```
 
-or go up one level
+OR go up one level
 
 ```
 cd ..
@@ -520,15 +526,21 @@ Some things happened. Once it is done, list the files and folder. Do you see a n
 
 It is named the same as the name of the repository you cloned.
 
-List what is inside of that directory. Do you see the `data` folder? This is the source data for our workshop.
+List what is inside of that directory using the command `ls 2019-02-23-WorkshopResources`. Do you see the `shell-lessons` folder?
 
-Let's prepare it for our workshop.
+Move into the `2019-02-23-WorkshopResources/shell-lessons` folder and run `ls` again. Do you see a `data` folder? This is the source data for our workshop.
+
+Let's prepare this data for our workshop by making a copy in the repository data folder we created earlier. First let's move back up to the `~/SDC_02-23-2019` folder:
+
+```
+cd ~/SDC_02-23-2019
+```
 
 ## copy the cloned data files into the original_data folder
 
 What is the copy command?
 
-Let's try to guess how to copy. We tried to do this with a single file at a time, but we need the content of the data directory copied to the data/original_data directory.
+Let's try to guess how to copy. We did this earlier with a single file at a time, but we need the content of the data directory copied to the data/original_data directory.
 
 To copy a directory we need to use the `-r` option. This tells the copy command that it needs to be `recursive`, meaning that it needs to dig through the directory.
 
