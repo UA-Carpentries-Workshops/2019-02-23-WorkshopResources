@@ -5,7 +5,7 @@
 We're going to explore shell scripts in this session. First you'll need to navigate to your ~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository directory and create a 'scripts' directory. But first, type into the Etherpad which key should you use to complete parts of the directory path as you're entering your `cd` command. (You don't really want to type every character in the path, do you?):
 
 ```bash
-cd ~/SDC_02-23-2019/2019-02-23-WorkshopResources/repository
+cd ~/SDC_02-23-2019/repository
 mkdir scripts
 ```
 
